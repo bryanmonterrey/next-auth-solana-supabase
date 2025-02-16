@@ -1,0 +1,146 @@
+Providers
+
+Coinbase({
+      clientId: process.env.COINBASE_CLIENT_ID,
+      clientSecret: process.env.COINBASE_CLIENT_SECRET
+    }),
+    Google({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
+    }),
+    Discord({
+      clientId: process.env.DISCORD_CLIENT_ID,
+      clientSecret: process.env.DISCORD_CLIENT_SECRET
+    }),
+
+
+
+
+
+
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+logs from clicking session page
+
+
+    Debug ENV: { url: 'https://oernlawafovxgoqxqadt.supabase.co', hasSecret: true }
+Providers: [
+  {
+    id: 'credentials',
+    name: 'Credentials',
+    type: 'credentials',
+    credentials: { message: [Object], signature: [Object], csrfToken: [Object] },
+    authorize: [Function: authorize],
+    options: {
+      name: 'web3-auth',
+      credentials: [Object],
+      authorize: [AsyncFunction: authorize]
+    }
+  }
+]
+Auth: [Function (anonymous)]
+NextAuth: [Function: NextAuth]
+signIn: [Function: signIn]
+signOut: [Function: signOut]
+handlers: { GET: [Function: httpHandler], POST: [Function: httpHandler] }
+handlers: { GET: [Function: httpHandler], POST: [Function: httpHandler] }
+GET: [Function: httpHandler]
+POST: [Function: httpHandler]
+[auth][debug]: request {}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ GET /api/auth/providers 200 in 28ms
+ GET /api/auth/csrf 200 in 42ms
+Domain validation: { messageDomain: 'localhost:3002', nextAuthDomain: 'localhost:3002' }
+CSRF validation: {
+  messageNonce: '276df47bb07a67e15fd7a678b90b57ecd6ff964af62da9715cc562fbcc0b7f85',
+  providedCsrfToken: '276df47bb07a67e15fd7a678b90b57ecd6ff964af62da9715cc562fbcc0b7f85'
+}
+Signature validation result: true
+(node:56576) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+User not found. Returning new user object for adapter to create.
+Sign in: {
+  id: '',
+  wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+  role: 'user',
+  created_at: '2025-02-16T00:28:30.848Z',
+  updated_at: '2025-02-16T00:28:30.848Z',
+  last_signed_in: '2025-02-16T00:28:30.848Z'
+} { providerAccountId: '', type: 'credentials', provider: 'credentials' }
+Token: {
+  name: undefined,
+  email: undefined,
+  picture: undefined,
+  sub: '',
+  user: {
+    id: '',
+    wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+    role: 'user',
+    created_at: '2025-02-16T00:28:30.848Z',
+    updated_at: '2025-02-16T00:28:30.848Z',
+    last_signed_in: '2025-02-16T00:28:30.848Z'
+  },
+  supabaseAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQyMjU3NzEwLCJzdWIiOiIiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTczOTY2NTcxMH0.zwzmP-u1lLiU6Ymu0MvUg1Wa9KY0QMdzil3hoaAH6m8'
+}
+ POST /api/auth/callback/credentials? 200 in 727ms
+Token: {
+  sub: '',
+  user: {
+    id: '',
+    wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+    role: 'user',
+    created_at: '2025-02-16T00:28:30.848Z',
+    updated_at: '2025-02-16T00:28:30.848Z',
+    last_signed_in: '2025-02-16T00:28:30.848Z'
+  },
+  supabaseAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQyMjU3NzEwLCJzdWIiOiIiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTczOTY2NTcxMH0.zwzmP-u1lLiU6Ymu0MvUg1Wa9KY0QMdzil3hoaAH6m8',
+  iat: 1739665710,
+  exp: 1739666010,
+  jti: 'fc8d8aa0-7b38-4034-bb6e-90b68d37b9d1'
+}
+Session: {
+  user: {
+    id: '',
+    wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+    role: 'user',
+    created_at: '2025-02-16T00:28:30.848Z',
+    updated_at: '2025-02-16T00:28:30.848Z',
+    last_signed_in: '2025-02-16T00:28:30.848Z'
+  },
+  expires: '2025-02-16T00:33:30.892Z',
+  supabaseAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQyMjU3NzEwLCJzdWIiOiIiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTczOTY2NTcxMH0.zwzmP-u1lLiU6Ymu0MvUg1Wa9KY0QMdzil3hoaAH6m8'
+}
+ GET /api/auth/session 200 in 13ms
+Token: {
+  sub: '',
+  user: {
+    id: '',
+    wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+    role: 'user',
+    created_at: '2025-02-16T00:28:30.848Z',
+    updated_at: '2025-02-16T00:28:30.848Z',
+    last_signed_in: '2025-02-16T00:28:30.848Z'
+  },
+  supabaseAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQyMjU3NzEwLCJzdWIiOiIiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTczOTY2NTcxMH0.zwzmP-u1lLiU6Ymu0MvUg1Wa9KY0QMdzil3hoaAH6m8',
+  iat: 1739665710,
+  exp: 1739666010,
+  jti: '32ffda3f-7104-48fc-a4b8-081d42930f2b'
+}
+Session: {
+  user: {
+    id: '',
+    wallet_address: '6REBA1U75CcSniceRe8NnfsAC7K6uHwuK5q5urg7unpx',
+    role: 'user',
+    created_at: '2025-02-16T00:28:30.848Z',
+    updated_at: '2025-02-16T00:28:30.848Z',
+    last_signed_in: '2025-02-16T00:28:30.848Z'
+  },
+  expires: '2025-02-16T00:33:30.907Z',
+  supabaseAccessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzQyMjU3NzEwLCJzdWIiOiIiLCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImlhdCI6MTczOTY2NTcxMH0.zwzmP-u1lLiU6Ymu0MvUg1Wa9KY0QMdzil3hoaAH6m8'
+}
+ GET /api/auth/session 200 in 8ms
+(node:56580) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
